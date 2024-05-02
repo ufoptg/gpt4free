@@ -130,11 +130,7 @@
                 <textarea id="DeepInfra-api_key" name="DeepInfra[api_key]" class="DeepInfraImage-api_key" placeholder="api_key"></textarea>
             </div>
             <div class="field box">
-                <label for="Gemini-api_key" class="label" title="">Gemini:</label>
-                <textarea id="Gemini-api_key" name="Gemini[api_key]" placeholder="&quot;__Secure-1PSID&quot; cookie"></textarea>
-            </div>
-            <div class="field box">
-                <label for="GeminiPro-api_key" class="label" title="">GeminiPro:</label>
+                <label for="GeminiPro-api_key" class="label" title="">Gemini API:</label>
                 <textarea id="GeminiPro-api_key" name="GeminiPro[api_key]" placeholder="api_key"></textarea>
             </div>
             <div class="field box">
@@ -146,16 +142,20 @@
                 <textarea id="HuggingFace-api_key" name="HuggingFace[api_key]" placeholder="api_key"></textarea>
             </div>
             <div class="field box">
-                <label for="Openai-api_key" class="label" title="">Openai:</label>
+                <label for="Openai-api_key" class="label" title="">OpenAI API:</label>
                 <textarea id="Openai-api_key" name="Openai[api_key]" placeholder="api_key"></textarea>
             </div>
             <div class="field box">
-                <label for="OpenaiChat-api_key" class="label" title="">OpenaiChat:</label>
-                <textarea id="OpenaiChat-api_key" name="OpenaiChat[api_key]" placeholder="api_key"></textarea>
+                <label for="OpenaiAccount-api_key" class="label" title="">OpenAI ChatGPT:</label>
+                <textarea id="OpenaiAccount-api_key" name="OpenaiAccount[api_key]" class="OpenaiChat-api_key" placeholder="access_key"></textarea>
             </div>
             <div class="field box">
                 <label for="OpenRouter-api_key" class="label" title="">OpenRouter:</label>
                 <textarea id="OpenRouter-api_key" name="OpenRouter[api_key]" placeholder="api_key"></textarea>
+            </div>
+            <div class="field box">
+                <label for="Replicate-api_key" class="label" title="">Replicate:</label>
+                <textarea id="Replicate-api_key" name="Replicate[api_key]" class="ReplicateImage-api_key" placeholder="api_key"></textarea>
             </div>
             </div>
             <div class="bottom_buttons">
@@ -220,6 +220,7 @@
                         <option value="gpt-4">gpt-4</option>
                         <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
                         <option value="llama2-70b">llama2-70b</option>
+                        <option value="llama3-70b-instruct">llama3-70b-instruct</option>
                         <option value="gemini-pro">gemini-pro</option>
                         <option value="">----</option>
                     </select>
@@ -229,9 +230,10 @@
                     <select name="provider" id="provider">
                         <option value="">Provider: Auto</option>
                         <option value="Bing">Bing</option>
-                        <option value="OpenaiChat">OpenaiChat</option>
+                        <option value="OpenaiChat">OpenAI ChatGPT</option>
                         <option value="Gemini">Gemini</option>
                         <option value="Liaobots">Liaobots</option>
+                        <option value="MetaAI">Meta AI</option>
                         <option value="You">You</option>
                         <option value="">----</option>
                     </select>

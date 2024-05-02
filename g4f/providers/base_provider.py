@@ -269,16 +269,18 @@ class AsyncGeneratorProvider(AsyncProvider):
             AsyncResult: An asynchronous generator yielding results.
         """
         raise NotImplementedError()
-    
+
 class ProviderModelMixin:
-    default_model: str
+    default_model: str = None
     models: list[str] = []
     model_aliases: dict[str, str] = {}
-    
+
     @classmethod
     def get_models(cls) -> list[str]:
+        if not cls.models and cls.default_model is not None:
+            return [cls.default_model]
         return cls.models
-    
+
     @classmethod
     def get_model(cls, model: str) -> str:
         if not model and cls.default_model is not None:
